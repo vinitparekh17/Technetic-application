@@ -1,0 +1,20 @@
+version: "3"
+services:
+  technetic:
+    image: vparekh17/technetic
+    container_name: technetic
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+  technetic-admin:
+    image: vparekh17/technetic-admin
+    container_name: technetic-admin
+    ports:
+      - "3000:3001"
+    restart: unless-stopped
+  technetic-server:
+    image: vparekh17/technetic-server
+    container_name: technetic-server
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
